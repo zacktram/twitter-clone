@@ -7,13 +7,11 @@ import db from "./firebase";
 function Feed() {
     const [posts, setPosts] = useState([]);
 
-    // userEffect runs the code body once when the Feed component loads
     useEffect(() => {
         db.collection('posts').onSnapshot(snapshot => (
             setPosts(snapshot.docs.map(doc => doc.data()))
         ))
-    }, []); // <-- square brackets where variables can be placed
-    // Will also run code body if a the state of a variable changes that is put inside the square brackets
+    }, []);
 
     return (
         <div className="feed">
