@@ -2,7 +2,6 @@ import { Search } from "@material-ui/icons";
 import React from "react";
 import {
     TwitterTimelineEmbed,
-    TwitterShareButton,
     TwitterTweetEmbed,
 } from "react-twitter-embed";
 import "./Widgets.css";
@@ -17,15 +16,11 @@ function Widgets() {
 
             <div className="widgetsWidgetContainer">
                 <h2>What's Happening?</h2>
-                <TwitterTweetEmbed tweetId={"1307046632517664771"} />
+                <TwitterTweetEmbed tweetId={"1749558602535199130"} />
                 <TwitterTimelineEmbed
                     sourceType="profile"
-                    screenName="ZackTram"
+                    screenName="JavaScript"
                     options={{height: 400}}
-                />
-                <TwitterShareButton
-                    url={"https://zacktram.github.io"}
-                    options={{text: "Check out my portfolio!"}}
                 />
             </div>
         </div>
